@@ -6,6 +6,8 @@
   --accent-color: #32cd32; /* Lime Green */
   --secondary-text: #666666;
   --card-bg: #f9f9f9;
+  --border-color: rgba(0, 0, 0, 0.1);
+  --input-bg: #ffffff;
   --transition-speed: 0.3s;
 }
 
@@ -17,6 +19,8 @@
   --accent-color: #32cd32; /* Lime Green */
   --secondary-text: #94a3b8;
   --card-bg: #1e293b;
+  --border-color: rgba(255, 255, 255, 0.1);
+  --input-bg: #0f172a;
 }
 
 * {

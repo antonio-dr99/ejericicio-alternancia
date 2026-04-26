@@ -1,11 +1,14 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useTheme } from '../context/ThemeContext';
 import './Navbar.css';
 
-const Navbar = ({ theme, toggleTheme }) => {
+const Navbar = () => {
+  const { theme, toggleTheme } = useTheme();
+
   return (
     <nav className="navbar">
-      <div className="navbar__brand">MI WEB</div>
+      <div className="navbar__brand">MI WEB SPA</div>
       
       <div className="navbar__links">
         <NavLink 
