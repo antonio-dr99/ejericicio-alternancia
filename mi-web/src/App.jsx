@@ -10,20 +10,30 @@ import Contacto from './pages/Contacto';
 import NotFound from './pages/NotFound';
 import './index.css';
 
+/**
+ * Componente principal App.
+ * Configura el enrutamiento (Ejercicio 1) y el contexto de tema (Ejercicio 5).
+ */
 function App() {
   return (
     <ThemeProvider>
       <BrowserRouter>
+        {/* ScrollToTop asegura que la página suba al inicio en cada cambio de ruta */}
         <ScrollToTop />
+        
         <Navbar />
+        
         <main>
+          {/* Configuración de rutas dinámicas sin recarga de página */}
           <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/servicios" element={<Servicios />} />
             <Route path="/contacto" element={<Contacto />} />
+            {/* Ruta comodín para manejar errores 404 */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
+        
         <Footer />
       </BrowserRouter>
     </ThemeProvider>

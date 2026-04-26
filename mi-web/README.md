@@ -1,73 +1,91 @@
-# React + TypeScript + Vite
+# Proyecto React SPA - Ejercicios de Alternancia
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es una Single Page Application (SPA) desarrollada con **React** y **Vite**, que integra una serie de ejercicios prácticos para demostrar el dominio de conceptos fundamentales de React, gestión de estado, enrutamiento y diseño web moderno.
 
-Currently, two official plugins are available:
+## 🚀 Características Principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+### 1. Sistema de Rutas (Ejercicio 1)
+- Implementación de **React Router v6** para una navegación fluida sin recarga de página.
+- Secciones definidas: **Inicio**, **Servicios** y **Contacto**.
+- **NavLink** con estado activo resaltado en color verde lima.
+- Animaciones de entrada `fadeUp` en cada cambio de ruta.
 
-## React Compiler
+### 2. Formulario con Validación (Ejercicio 2)
+- Formulario de contacto interactivo con validación en tiempo real.
+- Gestión de eventos: `onChange`, `onBlur` y `onSubmit`.
+- Feedback visual (bordes verdes/rojos) e indicadores de error para campos obligatorios, formato de email y longitud mínima.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 3. Galería de Imágenes Interactiva (Ejercicio 3)
+- Galería dinámica en la sección de Servicios.
+- Sistema de miniatura y visor principal que se actualiza mediante estado (`useState`).
+- Transiciones suaves entre imágenes.
 
-## Expanding the ESLint configuration
+### 4. CMS de Blog Dinámico (Ejercicio 4)
+- Sistema de gestión de contenidos (CMS) para publicaciones.
+- Funcionalidades completas: **Crear**, **Editar**, **Eliminar** y **Destacar** posts.
+- Uso de componentes independientes (`PostCard`) para renderizado dinámico.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 5. Modo Oscuro/Claro (Ejercicio 5)
+- Gestión de tema global mediante **React Context API**.
+- Uso extensivo de **Variables CSS** para un cambio de apariencia en tiempo real.
+- Persistencia del tema seleccionado en `localStorage`.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tecnologías Utilizadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- **React 19**
+- **Vite** (Build Tool)
+- **React Router Dom v6** (Navegación)
+- **CSS3** (Variables, Flexbox, Grid, Animaciones)
+- **Context API** (Gestión de estado global)
+
+---
+
+## 📁 Estructura del Proyecto
+
+```text
+src/
+├── components/          # Componentes reutilizables (Navbar, Footer, PostCard)
+├── context/             # Gestión de estado global (ThemeContext)
+├── pages/               # Vistas principales de la aplicación
+│   ├── Inicio.jsx
+│   ├── Servicios.jsx
+│   ├── Contacto.jsx
+│   └── NotFound.jsx     # Página de error 404
+├── App.jsx              # Configuración de Router y Context Provider
+├── index.css            # Variables CSS y estilos base
+└── main.jsx             # Punto de entrada de la aplicación
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 💻 Instalación y Ejecución
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/Antonio-DR99/Ejericicio-Alternancia.git
+   ```
+
+2. **Instalar dependencias:**
+   ```bash
+   cd mi-web
+   npm install
+   ```
+
+3. **Ejecutar en modo desarrollo:**
+   ```bash
+   npm run dev
+   ```
+
+4. **Abrir en el navegador:**
+   Visita `http://localhost:5173` para ver la aplicación en funcionamiento.
+
+---
+
+## ✍️ Autor
+
+- **Antonio** - [GitHub](https://github.com/Antonio-DR99)
+
+---
+*Este proyecto fue realizado como parte de los ejercicios de alternancia para el aprendizaje de desarrollo frontend con React.*

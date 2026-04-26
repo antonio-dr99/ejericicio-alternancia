@@ -1,6 +1,10 @@
 import React from 'react';
 import './pages.css';
 
+/**
+ * Página de Inicio (Ejercicio 1).
+ * Presenta la bienvenida y la descripción técnica del proyecto.
+ */
 const Inicio = () => {
   return (
     <div className="page-container fade-up">
