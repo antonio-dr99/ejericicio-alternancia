@@ -1,1 +1,0 @@
-# Ejericicio-Alternancia
